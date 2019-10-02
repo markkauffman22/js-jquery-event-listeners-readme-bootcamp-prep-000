@@ -10,6 +10,14 @@ function frameIt() {
   console.log('In fn frameIt');
   $('img').on('load', function() {
     $('img').addClass('tasty');
+    console.log('in loadIt');
+    console.log(' Why does this not print?? Tests still pass.');
+
+  });
+  // this adds the class 'tasty' on click though ...
+  $('img').on('click', function() {
+    $('img').addClass('tasty');
+    console.log("Added 'tasty'");
   });
 }
 
