@@ -9,7 +9,7 @@ describe('Selectors', () => {
     expect(window.alert).toHaveBeenCalled();
   });
 
-  it('frameIt() binds an event that frames the minion when the page loads', function() {
+  it('frameIt() binds an event that frames the mini hen the page loads', function() {
     window.frameIt()
 
     const img = window.$('img')
@@ -46,13 +46,13 @@ describe('Selectors', () => {
   })
 
   it('submitIt() binds an event that alerts "Your form is going to be submitted now." when the form is submitted', function() {
-    window.alert = expect.createSpy()
+    window.alert = expect.createSpy();
 
     window.submitIt();
 
-    const form = window.$('form')[0]
+    const form = window.$('form')[0];
 
-    window.$(form).trigger('submit')
+    window.$(form).trigger('submit');
 
     expect(window.alert).toHaveBeenCalledWith('Your form is going to be submitted now.');
   });
